@@ -93,7 +93,7 @@ if cmd == "gen-setup":
     open("Setup", "w").write(line + "\n")
     sys.exit(0)
 
-readme_text = open("README.rst", "U").read()
+# readme_text = open("README.rst", "U").read()
 version = open("pylibmc-version.h", "U").read().strip().split("\"")[1]
 
 setup(name="pylibmc", version=version,
@@ -101,5 +101,5 @@ setup(name="pylibmc", version=version,
       author="Ludvig Ericson", author_email="ludvig@lericson.se",
       license="3-clause BSD <http://www.opensource.org/licenses/bsd-license.php>",
       description="Quick and small memcached client for Python",
-      long_description=readme_text,
+      # long_description=readme_text,
       ext_modules=[pylibmc_ext], packages=["pylibmc"])
